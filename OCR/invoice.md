@@ -1,4 +1,4 @@
-# 票据 OCR 请求接口
+# 发票 OCR 请求接口文档
 
 **版本记录**
  
@@ -14,6 +14,7 @@
 
 ## 1. 接口信息
 
+ * 接口：https://fis.webank.com/saas/ocr/invoice
  * 类型: POST
 
 ## 2. 请求参数
