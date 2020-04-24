@@ -59,8 +59,52 @@ OCR 结果通过 HTTP Response 返回，HTTP Body 为 JSON 字符串，UTF-8 编
 
 ### 3.2 结果样例
 
+人像面：
+
+```
+Result:  {
+    "errorcode": 0,
+    "warnmsg": [],
+    "ocr_result": {
+        "side": "F",
+        "idno": "440100201412151022",
+        "name": "王微众",
+        "nation": "汉",
+        "gender": "男",
+        "address": "广东省深圳市南山区沙河西路1819号",
+        "birthdate": "20141215"
+    },
+    "image_result": {
+        "idcard_bbox": [
+            [35, 1079],
+            [35, 0],
+            [1791, 0],
+            [1791, 1079]
+        ]
+    }
+}
 ```
 
+国徽面：
+
+```
+{
+    "errorcode": 0,
+    "warnmsg": [],
+    "ocr_result": {
+        "side": "B",
+        "validthru": "20141215-20341215",
+        "issuedby": "深圳公安局南山分局"
+    },
+    "image_result": {
+        "idcard_bbox": [
+            [12, 345],
+            [12, 28],
+            [546, 28],
+            [546, 345]
+        ]
+    }
+}
 ```
 
 ### 3.2 错误码
