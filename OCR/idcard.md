@@ -20,7 +20,7 @@
 | 参数名称 | 参数类型 | 描述 | 默认值 |
 | ---- | ---- | ----jj | ---- |
 | image | String`*` | 图片内容，**Base64 编码**后的 JPG 或 PNG 格式图片 | |
-| session_id | String`*` | 用户自定义的唯一会话id | 默认为空
+| session_id | String`*` | 用户自定义的唯一会话id | |
 | ret_image | Bool | 是否返回识别后的切图（切图是指精确剪裁对齐后的身份证正反面图片），返回格式为JPEG格式二进制图片使用base64编码后的字符串 | False |
 | ret_portrait | Bool | 是否返回身份证（人像面）的人脸图片，返回格式为JPEG格式二进制图片使用base64编码后的字符串 | False |
 | ref_side | String | 当图片中同时存在身份证正反面时，通过该参数指定识别的版面：取值  'Any' - 识别人像面或国徽面，'F' - 仅识别人像面，'B' - 仅识别国徽面 |  'Any' |
@@ -43,15 +43,15 @@ OCR 结果通过 HTTP Response 返回，HTTP Body 为 JSON 字符串，UTF-8 编
 | errormsg | | String | 错误信息（中文）|
 | warnmsg | | JSONArray | 多重告警码 | | 
 | ocr_result | | JSONObject | 文字识别结果 |  | |
-| - | side | F-身份证人像面，B-身份证国徽面 | 
-| - | idno | 身份号码（人像面） | |
-| - | name | 姓名（人像面） | |
-| - | nation | 民族（人像面） | |
-| - | gender | 性别（人像面） | |
-| - | address | 地址（人像面） | |
-| - | birthdate | 生日（人像面） | 19900111 |
-| - | validthru | 有效期（国徽面） | 20000101-20100101 |
-| - | issuedby | 签发机关（国徽面） | |
+| - | side | String | F-身份证人像面，B-身份证国徽面 | 
+| - | idno | String | 身份号码（人像面） | |
+| - | name | String | 姓名（人像面） | |
+| - | nation | String | 民族（人像面） | |
+| - | gender | String | 性别（人像面） | |
+| - | address | String | 地址（人像面） | |
+| - | birthdate | String | 生日（人像面） | 19900111 |
+| - | validthru | String | 有效期（国徽面） | 20000101-20100101 |
+| - | issuedby | String | 签发机关（国徽面） | |
 | image_result | | JSONObject | 图片检测结果 | |
 | - | idcard | String | 身份证区域图片，使用 Base64 编码后的字符串，是否返回由请求参数 ret_image 决定 | |
 | - | portrait | String | 身份证人像照片，使用 Base64 编码后的字符串，是否返回由请求参数 ret_portrait 决定 | |
