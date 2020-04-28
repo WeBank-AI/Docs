@@ -21,7 +21,7 @@
 ### 2.1 参数列表
 
 | 参数名称 | 参数类型 | 描述 | 默认值 |
-| ---- | ---- | ----jj | ---- |
+| ---- | ---- | ---- | ---- |
 | image | String`*` | 图片内容，**Base64 编码**后的 JPG 或 PNG 格式图片 | |
 | session_id | String | 用户自定义的唯一会话id | 默认为空
 | ret_image | Bool | 是否返回识别后的切图（切图是指精确剪裁对齐后的身份证正反面图片），返回格式为JPEG格式二进制图片使用base64编码后的字符串 | False |
@@ -69,12 +69,18 @@ OCR 结果通过 HTTP Response 返回，HTTP Body 为 JSON 字符串，UTF-8 编
 | - | portrait | String | KTP 人像图片，使用 Base64 编码后的字符串，是否返回由请求参数 ret_portrait 决定 | | |
 | - | ktp_bbox | JSONArray | KTP 框坐标，格式为 [[x0, y0], [x1, y1], [x2, y2], [x3, y3]] |
 注：
+
 1) 印尼行政区域划分方案：https://zh.wikipedia.org/wiki/印度尼西亚行政区划
+
 划分级别（四级）：
-省 - Provinsi
-市/县 - Kabupaten
-区 - Kecamatan
-村 - Desa，社区 - Kelurahan
+
+* 省 - Provinsi
+
+* 市/县 - Kabupaten
+
+* 区 - Kecamatan
+
+* 村 - Desa，社区 - Kelurahan
 
 ### 3.2 结果样例
 
